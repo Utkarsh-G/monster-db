@@ -1,0 +1,12 @@
+# buf.gen.yaml
+
+# assuming "protoc-gen-go" and "protoc-gen-go-grpc" are on your "$PATH"
+
+version: v1
+plugins:
+  - plugin: go
+    out: monster/
+    opt: paths=source_relative
+  - plugin: go-grpc
+    out: monster/
+    opt: paths=source_relative,require_unimplemented_servers=false

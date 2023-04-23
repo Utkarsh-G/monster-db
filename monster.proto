@@ -1,14 +1,18 @@
 syntax = "proto3";
 
-package main;
+package mmonster;
 
-option go_package = "./main";
+option go_package = "./monster";
 
 message Monster {
-    string name = 1;
+    MonsterName name = 1;
     int32 level = 2;
 }
 
+message MonsterName {
+    string name = 1;
+}
+
 service MonsterService {
-    rpc GetMonster(Monster) returns (Monster){}
+    rpc GetMonster(MonsterName) returns (Monster){}
 }
