@@ -34,6 +34,7 @@ func main() {
 
 	monster.RegisterMonsterServiceServer(serverRegistrar, service)
 
+	fmt.Println("Starting server")
 	err = serverRegistrar.Serve(lis)
 
 	if err != nil {
